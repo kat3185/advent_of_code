@@ -39,8 +39,9 @@ else
   puts 'You are bad at counting.'
 end
 
-class Captcha
+class SecondCaptcha < Captcha
   private
+
   def relevant_num(index)
     new_index = index + half_length
     if length > new_index
@@ -61,7 +62,7 @@ end
 
 correct_answer = 1232
 
-new_cap = Captcha.new(number)
+new_cap = SecondCaptcha.new(number)
 
 if new_cap.count == correct_answer
   puts 'Nailed it!'
