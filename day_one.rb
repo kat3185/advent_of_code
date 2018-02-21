@@ -12,7 +12,7 @@ class Captcha
     end
   end
 
-private
+  private
 
   attr_reader :number
 
@@ -34,13 +34,13 @@ cap = Captcha.new(number)
 correct_answer = 1390
 
 if correct_answer == cap.count
-  puts "Nailed it!"
+  puts 'Nailed it!'
 else
-  puts "You are bad at counting."
+  puts 'You are bad at counting.'
 end
 
 class Captcha
-private
+  private
   def relevant_num(index)
     new_index = index + half_length
     if length > new_index
@@ -64,7 +64,7 @@ correct_answer = 1232
 new_cap = Captcha.new(number)
 
 if new_cap.count == correct_answer
-  puts "Nailed it!"
+  puts 'Nailed it!'
 else
-  puts "You are bad at counting."
+  puts 'You are bad at counting.'
 end
