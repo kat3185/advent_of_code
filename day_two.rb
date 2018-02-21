@@ -66,4 +66,4 @@ puts CheckSum.new(input).call
 puts CheckSum.new(input).call_part_two
 correct_answer = 44887
 
-pt_two_incorrect = 2636
+pt_two_correct = 242
