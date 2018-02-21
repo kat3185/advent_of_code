@@ -8,7 +8,7 @@ class Captcha
   def count
     numbers.each_with_index.inject(0) do |sum, pair|
       num, index = pair
-      valid_pattern(num, index) ? sum + num.to_i : sum
+      valid_pattern?(num, index) ? sum + num.to_i : sum
     end
   end
 
@@ -20,7 +20,7 @@ private
     @numbers ||= number.to_s.split('')
   end
 
-  def valid_pattern(num, index)
+  def valid_pattern?(num, index)
     num == relevant_num(index)
   end
 
